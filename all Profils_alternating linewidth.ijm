@@ -13,8 +13,8 @@ Dialog.create("Choose your channels");
 Dialog.addNumber("Scc1:", 2);
 Dialog.addNumber("f-ara-EdU:", 1);
 Dialog.addNumber("Hoechst", 3);
-Dialog.addNumber("starting_linewidth", 1);
-Dialog.addNumber("maximal_linewidth", 20);
+Dialog.addNumber("minimal linewidth", 1);
+Dialog.addNumber("maximal linewidth", 20);
 Dialog.show();
 channel_Scc1 = Dialog.getNumber();
 channel_EdU = Dialog.getNumber();
@@ -37,8 +37,6 @@ for (linewidth = min_linewidth; linewidth < max_linewidth+1; linewidth=linewidth
 		close("Plot of " + img_name);
 		selectWindow(img_name);
 		roiManager("Select", j );
-		//Roi.setStrokeWidth(i);
-		//Roi.setStrokeWidth(i); 
 		//setLineWidth(linewidth);
 		Stack.setChannel(3);			//Change to Scc1 channel
 		run("Clear Results");

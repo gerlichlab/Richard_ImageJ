@@ -16,6 +16,7 @@ Dialog.addNumber("Hoechst", 3);
 Dialog.addNumber("minimal linewidth", 1);
 Dialog.addNumber("maximal linewidth", 20);
 Dialog.show();
+// getting numbers from dialog
 channel_Scc1 = Dialog.getNumber();
 channel_EdU = Dialog.getNumber();
 channel_Hoechst = Dialog.getNumber();
@@ -29,10 +30,13 @@ for (i=1;i<roiManager("count");i++){
     ROI_array = Array.concat(ROI_array,i); 
 }
 print(num_roi);
+// saving ROI
 roiManager("save", splitDir + "\\positions"+ ".zip");
+// cycling through linewidth
 for (linewidth = min_linewidth; linewidth < max_linewidth+1; linewidth=linewidth+1){
 	roiManager("select", ROI_array);
 	roiManager("Set Line Width", linewidth);
+	// cycling through ROIs
 	for (j=0; j<num_roi; j++){ 
 		close("Plot of " + img_name);
 		selectWindow(img_name);

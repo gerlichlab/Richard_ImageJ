@@ -70,5 +70,5 @@ for (j=0; j<num_roi; j++){
 }
 roiManager("Deselect");
 roiManager("Delete");
-//close(img_name);
+close(img_name);
 //close();

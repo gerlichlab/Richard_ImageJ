@@ -66,7 +66,7 @@ for (j=0; j<num_roi; j++){
 	}
 	updateResults;
 	close();
-	save_dir = splitDir + "\\Profilplot_"+ (j+1) + ".csv";
+	save_dir = splitDir + "/Profilplot_"+ (j+1) + ".csv";
 	saveAs("Measurements",save_dir);
 }
 roiManager("Deselect");

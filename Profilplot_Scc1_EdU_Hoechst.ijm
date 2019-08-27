@@ -1,11 +1,3 @@
-//create a folder called same as image in the image directory
-img_dir=getInfo("image.directory");
-print(img_dir);
-img_name=getTitle();
-splitDir= img_dir  + "\\Scc1_EdU_Hoechst_" +img_name ;
-print(splitDir); 
-File.makeDirectory(splitDir); 
-
 // opens interactive window to access different Channelnumbers and linewidth
 Dialog.create("Choose your channels");
 Dialog.addNumber("Scc1:", 2);
@@ -17,6 +9,15 @@ channel_Scc1 = Dialog.getNumber();
 channel_EdU = Dialog.getNumber();
 channel_Hoechst = Dialog.getNumber();
 linewidth = Dialog.getNumber();
+
+//create a folder called same as image in the image directory
+img_dir=getInfo("image.directory");
+print(img_dir);
+img_name=getTitle();
+splitDir= img_dir  + "\\Scc1_EdU_Hoechst_" +img_name ;
+print(splitDir); 
+File.makeDirectory(splitDir); 
+
 
 setBatchMode(true);
 num_roi=roiManager("count");

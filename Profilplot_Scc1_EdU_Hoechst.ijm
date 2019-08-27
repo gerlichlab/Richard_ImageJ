@@ -14,7 +14,7 @@ linewidth = Dialog.getNumber();
 img_dir=getInfo("image.directory");
 print(img_dir);
 img_name=getTitle();
-splitDir= img_dir  + "\\Scc1_EdU_Hoechst_" +img_name ;
+splitDir= img_dir  + "/Scc1_EdU_Hoechst_" +img_name ;
 print(splitDir); 
 File.makeDirectory(splitDir); 
 
@@ -22,7 +22,7 @@ File.makeDirectory(splitDir);
 setBatchMode(true);
 num_roi=roiManager("count");
 print(num_roi);
-roiManager("save", splitDir + "\\positions"+ ".zip");
+roiManager("save", splitDir + "/positions"+ ".zip");
 
 //Capture lineprofiles for Scc1, Hoechst and f-ara-EdU channel individually
 for (j=0; j<num_roi; j++){ 
